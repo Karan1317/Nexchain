@@ -23,10 +23,10 @@ function NavBar() {
             <Nav.Link href="/order">Order</Nav.Link>
             <Nav.Link href="/buyer">Buyer</Nav.Link>
             <Nav.Link href="/login">Log In</Nav.Link>
-            <NavDropdown title="Orders" id="navbarScrollingDropdown">
+            {/* <NavDropdown title="Orders" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#action3">Track Orders</NavDropdown.Item>
               <NavDropdown.Item href="#action5">Returns</NavDropdown.Item>
-            </NavDropdown>
+            </NavDropdown> */}
             <Nav.Link href="#cart">Cart</Nav.Link>
           </Nav>
           <Form className="d-flex">

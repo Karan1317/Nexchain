@@ -1,27 +1,25 @@
-// src/pages/Home/Home.jsx
-
 import React from 'react';
-import { Button, Container, Row, Col } from 'react-bootstrap';
+import { Button, Row, Col } from 'react-bootstrap';
 import './Home.css';
 
 const Home = () => {
   return (
     <div className="home">
-      <Container className="text-center hero-section">
-        <Row>
-          <Col>
-            <h1 className="hero-title">Welcome to NeXchain</h1>
-            <p className="hero-subtitle">
-              Streamlining the supply chain management for electronics.
-            </p>
-            <Button className="cta-button" variant="primary" size="lg">
-              Get Started
-            </Button>
-          </Col>
-        </Row>
-      </Container>
+      {/* Hero Section */}
+      <div className="hero-section">
+        <div className="hero-content">
+          <h1 className="hero-title">Welcome to NeXchain</h1>
+          <p className="hero-subtitle">
+            Streamlining the supply chain management for electronics.
+          </p>
+          <Button className="cta-button" size="lg">
+            Get Started
+          </Button>
+        </div>
+      </div>
 
-      <Container className="features-section">
+      {/* Features Section */}
+      <div className="features-section">
         <Row>
           <Col md={4} className="feature">
             <i className="bi bi-truck"></i>
@@ -45,7 +43,7 @@ const Home = () => {
             </p>
           </Col>
         </Row>
-      </Container>
+      </div>
     </div>
   );
 };

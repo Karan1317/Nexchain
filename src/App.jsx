@@ -1,26 +1,27 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
-import NavBar from "./components/NavBar";
-import Login from "./pages/LoginPage/LoginPage";
-import Inventory from "./pages/Inventory/Inventory";
-import Home from "./pages/Home/Home";
-import Buyer from "./pages/Buyer/Buyer";
-import Order from "./pages/Order/Order";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState } from "react";
+import Layout from "./components/Layout";
+import Home from "./pages/Home";
+import Dashboard from "./pages/Dashboard";
+import Profile from "./pages/Profile";
+import Order from "./pages/Order";
+import Inventory from "./pages/Inventory";
 
 function App() {
   return (
     <Router>
-      <div className="App">
-        <NavBar />
-        <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/buyer" element={<Buyer />} />
-          <Route path="/order" element={<Order />} />
-          <Route path="/login" element={<Login />} />
+      <Routes>
+        {/* Home page route */}
+        <Route path="/" element={<Home />} />
+
+        {/* Layout wrapped routes */}
+        <Route element={<Layout />}>
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/inventory" element={<Inventory />} />
-        </Routes>
-      </div>
+          <Route path="/order" element={<Order />} />
+          <Route path="/profile" element={<Profile />} />
+        </Route>
+      </Routes>
     </Router>
   );
 }
